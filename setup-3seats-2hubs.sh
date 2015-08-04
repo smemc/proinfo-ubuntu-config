@@ -54,4 +54,5 @@ systemctl start zram-config.service
 
 progresso "Ativando as novas regras do udev e trazendo os novos terminais à vida"
 
+systemctl start x-daemon-3seats@${tn502_display}.service
 udevadm trigger
