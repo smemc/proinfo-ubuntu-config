@@ -1,0 +1,4 @@
+#TAG=="seat", ENV{ID_FOR_SEAT}=="usb-pci-*-usb-*_1", ENV{ID_SEAT}="seat-usb1"
+TAG=="seat", ENV{ID_FOR_SEAT}=="usb-pci-*-usb-*_2", ENV{ID_SEAT}="seat-usb2"
+#TAG=="seat", ENV{ID_FOR_SEAT}=="usb-pci-*-usb-*_3", ENV{ID_SEAT}="seat-usb3"
+TAG=="seat", ENV{ID_FOR_SEAT}=="usb-pci-*-usb-*_4", ENV{ID_SEAT}="seat-usb4"

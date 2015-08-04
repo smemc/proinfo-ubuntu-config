@@ -1,0 +1,1 @@
+SUBSYSTEMS=="pci", ATTR{vendor}=="0x126f", ATTR{device}=="0x0501", TAG+="seat", TAG+="master-of-seat", ENV{ID_AUTOSEAT}="1", ENV{ID_FOR_SEAT}="tn502"

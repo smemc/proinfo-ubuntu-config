@@ -1,0 +1,19 @@
+Section "Device"
+    MatchSeat "__x-daemon@TN502_DISPLAY@__"
+    Identifier "videocard_sm501_dualhead"
+    BusID "PCI:@TN502_ADDRESS@"
+    Driver "siliconmotion"
+    Option "PanelSize" "1360x768"
+    Option "Dualhead" "true"
+EndSection
+
+Section "Screen"
+    MatchSeat "__x-daemon@TN502_DISPLAY@__"
+    Identifier "screen_sm501_dualhead"
+    Device "videocard_sm501_dualhead"
+    DefaultDepth 16
+
+    SubSection "Display"
+        Virtual 2720 768
+    EndSubSection
+EndSection

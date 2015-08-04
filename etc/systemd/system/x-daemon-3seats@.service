@@ -1,0 +1,12 @@
+[Unit]
+Description=X on display %i
+Before=lightdm.service
+StopWhenUnneeded=true
+
+[Service]
+Type=forking
+ExecStart=/etc/systemd/scripts/x-daemon %i -seat __x-daemon%i__ -nolisten tcp -dpms -s 0 -nocursor
+ExecStartPost=/usr/bin/xrandr -d %i --output VGA --auto --right-of LVDS
+
+[Install]
+WantedBy=display-manager.service

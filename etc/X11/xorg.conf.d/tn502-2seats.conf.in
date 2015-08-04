@@ -1,0 +1,14 @@
+Section "Device"
+    MatchSeat "seat-tn502"
+    Identifier "videocard_sm501"
+    BusID "PCI:@TN502_ADDRESS@"
+    Driver "siliconmotion"
+    Option "PanelSize" "1360x768"
+EndSection
+
+Section "Screen"
+    MatchSeat "seat-tn502"
+    Identifier "screen_sm501"
+    Device "videocard_sm501"
+    DefaultDepth 16
+EndSection

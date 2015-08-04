@@ -1,0 +1,25 @@
+Section "Device"
+    MatchSeat "seat-usb2"
+    MatchSeat "seat-usb4"
+    Identifier "nested_device"
+    Driver "nested"
+    Option "Display" "@TN502_DISPLAY@"
+EndSection
+
+Section "Screen"
+    MatchSeat "seat-usb2"
+    Identifier "nested_screen_LVDS"
+    Device "nested_device"
+    DefaultDepth 16
+    Option "Output" "LVDS"
+EndSection
+
+Section "Screen"
+    MatchSeat "seat-usb4"
+    Identifier "nested_screen_VGA"
+    Device "nested_device"
+    DefaultDepth 16
+    Option "Output" "VGA"
+    Option "Enable" "true"
+    Option "RightOf" "LVDS"
+EndSection
